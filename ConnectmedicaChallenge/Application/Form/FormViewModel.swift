@@ -10,10 +10,21 @@ import Foundation
 
 class FormViewModel {
     let formName: String
-    private(set) var formFields: [FormField]
+    private var formFields: [FormField]
+
+    var fieldsCount: Int {
+        return formFields.count
+    }
 
     init(formName: String, formFields: [FormField]) {
         self.formName = formName
         self.formFields = formFields
+    }
+
+    func getFormField(forIndexPath indexPath: IndexPath) -> FormField? {
+        guard fieldsCount > 0 else { return nil }
+        guard indexPath.row >= 0 && indexPath.row < fieldsCount else { return nil }
+
+        return formFields[indexPath.row]
     }
 }
