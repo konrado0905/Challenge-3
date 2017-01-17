@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		177B34151E2E629200A009DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B34141E2E629200A009DF /* AppDelegate.swift */; };
-		177B34171E2E629200A009DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B34161E2E629200A009DF /* ViewController.swift */; };
-		177B341A1E2E629200A009DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177B34181E2E629200A009DF /* Main.storyboard */; };
+		177B341A1E2E629200A009DF /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177B34181E2E629200A009DF /* Form.storyboard */; };
 		177B341D1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 177B341B1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld */; };
 		177B341F1E2E629200A009DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 177B341E1E2E629200A009DF /* Assets.xcassets */; };
 		177B34221E2E629200A009DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177B34201E2E629200A009DF /* LaunchScreen.storyboard */; };
@@ -18,8 +17,7 @@
 /* Begin PBXFileReference section */
 		177B34111E2E629200A009DF /* ConnectmedicaChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectmedicaChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		177B34141E2E629200A009DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		177B34161E2E629200A009DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		177B34191E2E629200A009DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		177B34191E2E629200A009DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Form.storyboard; sourceTree = "<group>"; };
 		177B341C1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConnectmedicaChallenge.xcdatamodel; sourceTree = "<group>"; };
 		177B341E1E2E629200A009DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		177B34211E2E629200A009DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +54,46 @@
 		177B34131E2E629200A009DF /* ConnectmedicaChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				177B34141E2E629200A009DF /* AppDelegate.swift */,
-				177B34161E2E629200A009DF /* ViewController.swift */,
-				177B34181E2E629200A009DF /* Main.storyboard */,
-				177B341E1E2E629200A009DF /* Assets.xcassets */,
-				177B34201E2E629200A009DF /* LaunchScreen.storyboard */,
-				177B34231E2E629200A009DF /* Info.plist */,
-				177B341B1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld */,
+				177B34291E2E63BE00A009DF /* Application */,
+				177B342A1E2E63CB00A009DF /* Models */,
+				177B342C1E2E640A00A009DF /* Resources */,
 			);
 			path = ConnectmedicaChallenge;
+			sourceTree = "<group>";
+		};
+		177B34291E2E63BE00A009DF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				177B342B1E2E63E700A009DF /* Form */,
+				177B34141E2E629200A009DF /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		177B342A1E2E63CB00A009DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				177B341B1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		177B342B1E2E63E700A009DF /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				177B34181E2E629200A009DF /* Form.storyboard */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		177B342C1E2E640A00A009DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				177B341E1E2E629200A009DF /* Assets.xcassets */,
+				177B34231E2E629200A009DF /* Info.plist */,
+				177B34201E2E629200A009DF /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +158,7 @@
 			files = (
 				177B34221E2E629200A009DF /* LaunchScreen.storyboard in Resources */,
 				177B341F1E2E629200A009DF /* Assets.xcassets in Resources */,
-				177B341A1E2E629200A009DF /* Main.storyboard in Resources */,
+				177B341A1E2E629200A009DF /* Form.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +169,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				177B34171E2E629200A009DF /* ViewController.swift in Sources */,
 				177B341D1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld in Sources */,
 				177B34151E2E629200A009DF /* AppDelegate.swift in Sources */,
 			);
@@ -149,12 +177,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		177B34181E2E629200A009DF /* Main.storyboard */ = {
+		177B34181E2E629200A009DF /* Form.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				177B34191E2E629200A009DF /* Base */,
 			);
-			name = Main.storyboard;
+			name = Form.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		177B34201E2E629200A009DF /* LaunchScreen.storyboard */ = {
@@ -163,6 +192,7 @@
 				177B34211E2E629200A009DF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -266,7 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WM5VQQ9GA7;
-				INFOPLIST_FILE = ConnectmedicaChallenge/Info.plist;
+				INFOPLIST_FILE = ConnectmedicaChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KZ.ConnectmedicaChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -279,7 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WM5VQQ9GA7;
-				INFOPLIST_FILE = ConnectmedicaChallenge/Info.plist;
+				INFOPLIST_FILE = ConnectmedicaChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KZ.ConnectmedicaChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,6 +336,7 @@
 				177B34281E2E629200A009DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
