@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,11 +24,7 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zxU-Mm-UcI"/>
-                                    <barButtonItem title="Zapisz" id="cOB-5C-dy8">
-                                        <connections>
-                                            <action selector="saveButtonDidTap:" destination="BYZ-38-t0r" id="fi3-zL-9nf"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem systemItem="save" id="cOB-5C-dy8"/>
                                 </items>
                             </toolbar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ad7-a9-adv">
@@ -67,7 +62,6 @@
                     <navigationItem key="navigationItem" id="q83-pc-6Ld"/>
                     <connections>
                         <outlet property="formCollectionView" destination="ad7-a9-adv" id="Z2A-T6-oW2"/>
-                        <outlet property="saveButton" destination="cOB-5C-dy8" id="gAv-sc-cBu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
