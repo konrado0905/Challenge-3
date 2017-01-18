@@ -1,528 +1,1233 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		177B34151E2E629200A009DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B34141E2E629200A009DF /* AppDelegate.swift */; };
-		177B341A1E2E629200A009DF /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177B34181E2E629200A009DF /* Form.storyboard */; };
-		177B341D1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 177B341B1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld */; };
-		177B341F1E2E629200A009DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 177B341E1E2E629200A009DF /* Assets.xcassets */; };
-		177B34221E2E629200A009DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177B34201E2E629200A009DF /* LaunchScreen.storyboard */; };
-		177B342E1E2E654400A009DF /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B342D1E2E654400A009DF /* FormViewController.swift */; };
-		177B34301E2E662700A009DF /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B342F1E2E662700A009DF /* FormViewModel.swift */; };
-		17829A2A1E2E70FF001F12E7 /* FormFieldViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A291E2E70FF001F12E7 /* FormFieldViewModels.swift */; };
-		17829A2E1E2E8FF9001F12E7 /* ValueFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A2C1E2E8FF9001F12E7 /* ValueFormFieldCell.swift */; };
-		17829A2F1E2E8FF9001F12E7 /* DateFormFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17829A2D1E2E8FF9001F12E7 /* DateFormFieldCell.xib */; };
-		17829A321E2E929F001F12E7 /* CheckboxFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A301E2E929F001F12E7 /* CheckboxFormFieldCell.swift */; };
-		17829A331E2E929F001F12E7 /* CheckboxFormFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17829A311E2E929F001F12E7 /* CheckboxFormFieldCell.xib */; };
-		17829A351E2EF56C001F12E7 /* TextFormFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17829A341E2EF56C001F12E7 /* TextFormFieldCell.xib */; };
-		17829A371E2EF5D2001F12E7 /* TextFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A361E2EF5D2001F12E7 /* TextFormFieldCell.swift */; };
-		17829A391E2EF673001F12E7 /* DateFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A381E2EF673001F12E7 /* DateFormFieldCell.swift */; };
-		17829A3B1E2EFA37001F12E7 /* DatePickerAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17829A3A1E2EFA37001F12E7 /* DatePickerAccessoryView.xib */; };
-		17829A3D1E2EFACB001F12E7 /* DatePickerAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A3C1E2EFACB001F12E7 /* DatePickerAccessoryView.swift */; };
-		17829A401E2EFF3F001F12E7 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A3F1E2EFF3F001F12E7 /* BundleExtensions.swift */; };
-		17829A421E2F7CF1001F12E7 /* RxVariableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A411E2F7CF1001F12E7 /* RxVariableExtension.swift */; };
-		17EAEABB1E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EAEAB91E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift */; };
-		17EAEABC1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EAEABA1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift */; };
-		17EAEABE1E2FA58E0030EDC6 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EAEABD1E2FA58E0030EDC6 /* CoreDataHelper.swift */; };
-		C7312D28699109FBD861414A /* Pods_ConnectmedicaChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E9744B9DAF6A138A83EFB9 /* Pods_ConnectmedicaChallenge.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		177B34111E2E629200A009DF /* ConnectmedicaChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectmedicaChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		177B34141E2E629200A009DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		177B34191E2E629200A009DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Form.storyboard; sourceTree = "<group>"; };
-		177B341C1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConnectmedicaChallenge.xcdatamodel; sourceTree = "<group>"; };
-		177B341E1E2E629200A009DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		177B34211E2E629200A009DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		177B34231E2E629200A009DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		177B342D1E2E654400A009DF /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
-		177B342F1E2E662700A009DF /* FormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
-		17829A291E2E70FF001F12E7 /* FormFieldViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormFieldViewModels.swift; sourceTree = "<group>"; };
-		17829A2C1E2E8FF9001F12E7 /* ValueFormFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueFormFieldCell.swift; sourceTree = "<group>"; };
-		17829A2D1E2E8FF9001F12E7 /* DateFormFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateFormFieldCell.xib; sourceTree = "<group>"; };
-		17829A301E2E929F001F12E7 /* CheckboxFormFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxFormFieldCell.swift; sourceTree = "<group>"; };
-		17829A311E2E929F001F12E7 /* CheckboxFormFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckboxFormFieldCell.xib; sourceTree = "<group>"; };
-		17829A341E2EF56C001F12E7 /* TextFormFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFormFieldCell.xib; sourceTree = "<group>"; };
-		17829A361E2EF5D2001F12E7 /* TextFormFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormFieldCell.swift; sourceTree = "<group>"; };
-		17829A381E2EF673001F12E7 /* DateFormFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormFieldCell.swift; sourceTree = "<group>"; };
-		17829A3A1E2EFA37001F12E7 /* DatePickerAccessoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerAccessoryView.xib; sourceTree = "<group>"; };
-		17829A3C1E2EFACB001F12E7 /* DatePickerAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerAccessoryView.swift; sourceTree = "<group>"; };
-		17829A3F1E2EFF3F001F12E7 /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
-		17829A411E2F7CF1001F12E7 /* RxVariableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxVariableExtension.swift; sourceTree = "<group>"; };
-		17EAEAB91E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PersonalInfoForm+CoreDataClass.swift"; sourceTree = "<group>"; };
-		17EAEABA1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PersonalInfoForm+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		17EAEABD1E2FA58E0030EDC6 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		189475C1FA12CA5B4DEAF97D /* Pods-ConnectmedicaChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectmedicaChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		62E9744B9DAF6A138A83EFB9 /* Pods_ConnectmedicaChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectmedicaChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		75F1F9EECCA88B90CFEC0592 /* Pods-ConnectmedicaChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectmedicaChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge.release.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		177B340E1E2E629100A009DF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7312D28699109FBD861414A /* Pods_ConnectmedicaChallenge.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		177B34081E2E629100A009DF = {
-			isa = PBXGroup;
-			children = (
-				177B34131E2E629200A009DF /* ConnectmedicaChallenge */,
-				D58197EF4D13AD9DD9B9B548 /* Frameworks */,
-				9BD521D7C6E8BD0245691CB8 /* Pods */,
-				177B34121E2E629200A009DF /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		177B34121E2E629200A009DF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				177B34111E2E629200A009DF /* ConnectmedicaChallenge.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		177B34131E2E629200A009DF /* ConnectmedicaChallenge */ = {
-			isa = PBXGroup;
-			children = (
-				177B34291E2E63BE00A009DF /* Application */,
-				177B342A1E2E63CB00A009DF /* Models */,
-				177B342C1E2E640A00A009DF /* Resources */,
-			);
-			path = ConnectmedicaChallenge;
-			sourceTree = "<group>";
-		};
-		177B34291E2E63BE00A009DF /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				17829A3E1E2EFF2B001F12E7 /* Extensions */,
-				177B342B1E2E63E700A009DF /* Form */,
-				17829A261E2E6899001F12E7 /* FormField */,
-				177B34141E2E629200A009DF /* AppDelegate.swift */,
-				17EAEABD1E2FA58E0030EDC6 /* CoreDataHelper.swift */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		177B342A1E2E63CB00A009DF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				17EAEAB91E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift */,
-				17EAEABA1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift */,
-				177B341B1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		177B342B1E2E63E700A009DF /* Form */ = {
-			isa = PBXGroup;
-			children = (
-				177B34181E2E629200A009DF /* Form.storyboard */,
-				177B342D1E2E654400A009DF /* FormViewController.swift */,
-				177B342F1E2E662700A009DF /* FormViewModel.swift */,
-			);
-			path = Form;
-			sourceTree = "<group>";
-		};
-		177B342C1E2E640A00A009DF /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				177B341E1E2E629200A009DF /* Assets.xcassets */,
-				177B34231E2E629200A009DF /* Info.plist */,
-				177B34201E2E629200A009DF /* LaunchScreen.storyboard */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		17829A261E2E6899001F12E7 /* FormField */ = {
-			isa = PBXGroup;
-			children = (
-				17829A2B1E2E8FC9001F12E7 /* View */,
-				17829A291E2E70FF001F12E7 /* FormFieldViewModels.swift */,
-			);
-			path = FormField;
-			sourceTree = "<group>";
-		};
-		17829A2B1E2E8FC9001F12E7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				17829A301E2E929F001F12E7 /* CheckboxFormFieldCell.swift */,
-				17829A311E2E929F001F12E7 /* CheckboxFormFieldCell.xib */,
-				17829A381E2EF673001F12E7 /* DateFormFieldCell.swift */,
-				17829A2D1E2E8FF9001F12E7 /* DateFormFieldCell.xib */,
-				17829A3C1E2EFACB001F12E7 /* DatePickerAccessoryView.swift */,
-				17829A3A1E2EFA37001F12E7 /* DatePickerAccessoryView.xib */,
-				17829A361E2EF5D2001F12E7 /* TextFormFieldCell.swift */,
-				17829A341E2EF56C001F12E7 /* TextFormFieldCell.xib */,
-				17829A2C1E2E8FF9001F12E7 /* ValueFormFieldCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		17829A3E1E2EFF2B001F12E7 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				17829A3F1E2EFF3F001F12E7 /* BundleExtensions.swift */,
-				17829A411E2F7CF1001F12E7 /* RxVariableExtension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		9BD521D7C6E8BD0245691CB8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				189475C1FA12CA5B4DEAF97D /* Pods-ConnectmedicaChallenge.debug.xcconfig */,
-				75F1F9EECCA88B90CFEC0592 /* Pods-ConnectmedicaChallenge.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D58197EF4D13AD9DD9B9B548 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				62E9744B9DAF6A138A83EFB9 /* Pods_ConnectmedicaChallenge.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		177B34101E2E629100A009DF /* ConnectmedicaChallenge */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 177B34261E2E629200A009DF /* Build configuration list for PBXNativeTarget "ConnectmedicaChallenge" */;
-			buildPhases = (
-				966D6FE30909A6F0E7DBD09F /* [CP] Check Pods Manifest.lock */,
-				177B340D1E2E629100A009DF /* Sources */,
-				177B340E1E2E629100A009DF /* Frameworks */,
-				177B340F1E2E629100A009DF /* Resources */,
-				7F8D453F8505E5DA6C275DBB /* [CP] Embed Pods Frameworks */,
-				70A344B7276A1F132BDC4F33 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ConnectmedicaChallenge;
-			productName = ConnectmedicaChallenge;
-			productReference = 177B34111E2E629200A009DF /* ConnectmedicaChallenge.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		177B34091E2E629100A009DF /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Konrad Zdunczyk";
-				TargetAttributes = {
-					177B34101E2E629100A009DF = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = WM5VQQ9GA7;
-						ProvisioningStyle = Automatic;
-					};
-				};
-			};
-			buildConfigurationList = 177B340C1E2E629100A009DF /* Build configuration list for PBXProject "ConnectmedicaChallenge" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 177B34081E2E629100A009DF;
-			productRefGroup = 177B34121E2E629200A009DF /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				177B34101E2E629100A009DF /* ConnectmedicaChallenge */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		177B340F1E2E629100A009DF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17829A331E2E929F001F12E7 /* CheckboxFormFieldCell.xib in Resources */,
-				17829A2F1E2E8FF9001F12E7 /* DateFormFieldCell.xib in Resources */,
-				17829A3B1E2EFA37001F12E7 /* DatePickerAccessoryView.xib in Resources */,
-				177B34221E2E629200A009DF /* LaunchScreen.storyboard in Resources */,
-				17829A351E2EF56C001F12E7 /* TextFormFieldCell.xib in Resources */,
-				177B341F1E2E629200A009DF /* Assets.xcassets in Resources */,
-				177B341A1E2E629200A009DF /* Form.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		70A344B7276A1F132BDC4F33 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F8D453F8505E5DA6C275DBB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		966D6FE30909A6F0E7DBD09F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		177B340D1E2E629100A009DF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17EAEABE1E2FA58E0030EDC6 /* CoreDataHelper.swift in Sources */,
-				177B342E1E2E654400A009DF /* FormViewController.swift in Sources */,
-				17829A421E2F7CF1001F12E7 /* RxVariableExtension.swift in Sources */,
-				17829A321E2E929F001F12E7 /* CheckboxFormFieldCell.swift in Sources */,
-				177B341D1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld in Sources */,
-				17EAEABB1E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift in Sources */,
-				17EAEABC1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift in Sources */,
-				17829A401E2EFF3F001F12E7 /* BundleExtensions.swift in Sources */,
-				17829A2E1E2E8FF9001F12E7 /* ValueFormFieldCell.swift in Sources */,
-				177B34301E2E662700A009DF /* FormViewModel.swift in Sources */,
-				17829A2A1E2E70FF001F12E7 /* FormFieldViewModels.swift in Sources */,
-				177B34151E2E629200A009DF /* AppDelegate.swift in Sources */,
-				17829A371E2EF5D2001F12E7 /* TextFormFieldCell.swift in Sources */,
-				17829A391E2EF673001F12E7 /* DateFormFieldCell.swift in Sources */,
-				17829A3D1E2EFACB001F12E7 /* DatePickerAccessoryView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		177B34181E2E629200A009DF /* Form.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				177B34191E2E629200A009DF /* Base */,
-			);
-			name = Form.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
-		177B34201E2E629200A009DF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				177B34211E2E629200A009DF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		177B34241E2E629200A009DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		177B34251E2E629200A009DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		177B34271E2E629200A009DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 189475C1FA12CA5B4DEAF97D /* Pods-ConnectmedicaChallenge.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WM5VQQ9GA7;
-				INFOPLIST_FILE = ConnectmedicaChallenge/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = KZ.ConnectmedicaChallenge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		177B34281E2E629200A009DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75F1F9EECCA88B90CFEC0592 /* Pods-ConnectmedicaChallenge.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WM5VQQ9GA7;
-				INFOPLIST_FILE = ConnectmedicaChallenge/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = KZ.ConnectmedicaChallenge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		177B340C1E2E629100A009DF /* Build configuration list for PBXProject "ConnectmedicaChallenge" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				177B34241E2E629200A009DF /* Debug */,
-				177B34251E2E629200A009DF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		177B34261E2E629200A009DF /* Build configuration list for PBXNativeTarget "ConnectmedicaChallenge" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				177B34271E2E629200A009DF /* Debug */,
-				177B34281E2E629200A009DF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		177B341B1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				177B341C1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodel */,
-			);
-			currentVersion = 177B341C1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodel */;
-			path = ConnectmedicaChallenge.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
-	};
-	rootObject = 177B34091E2E629100A009DF /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>177B34081E2E629100A009DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>177B34131E2E629200A009DF</string>
+				<string>D58197EF4D13AD9DD9B9B548</string>
+				<string>9BD521D7C6E8BD0245691CB8</string>
+				<string>177B34121E2E629200A009DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B34091E2E629100A009DF</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0820</string>
+				<key>LastUpgradeCheck</key>
+				<string>0820</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Konrad Zdunczyk</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>177B34101E2E629100A009DF</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.2.1</string>
+						<key>DevelopmentTeam</key>
+						<string>WM5VQQ9GA7</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>177B340C1E2E629100A009DF</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>177B34081E2E629100A009DF</string>
+			<key>productRefGroup</key>
+			<string>177B34121E2E629200A009DF</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>177B34101E2E629100A009DF</string>
+			</array>
+		</dict>
+		<key>177B340C1E2E629100A009DF</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>177B34241E2E629200A009DF</string>
+				<string>177B34251E2E629200A009DF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>177B340D1E2E629100A009DF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>17EAEABE1E2FA58E0030EDC6</string>
+				<string>177B342E1E2E654400A009DF</string>
+				<string>17829A421E2F7CF1001F12E7</string>
+				<string>17829A321E2E929F001F12E7</string>
+				<string>177B341D1E2E629200A009DF</string>
+				<string>17EAEABB1E2F94300030EDC6</string>
+				<string>17EAEABC1E2F94300030EDC6</string>
+				<string>17829A401E2EFF3F001F12E7</string>
+				<string>17829A2E1E2E8FF9001F12E7</string>
+				<string>177B34301E2E662700A009DF</string>
+				<string>17829A2A1E2E70FF001F12E7</string>
+				<string>177B34151E2E629200A009DF</string>
+				<string>17829A371E2EF5D2001F12E7</string>
+				<string>17829A391E2EF673001F12E7</string>
+				<string>17829A3D1E2EFACB001F12E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>177B340E1E2E629100A009DF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C7312D28699109FBD861414A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>177B340F1E2E629100A009DF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>17829A331E2E929F001F12E7</string>
+				<string>17829A2F1E2E8FF9001F12E7</string>
+				<string>17829A3B1E2EFA37001F12E7</string>
+				<string>177B34221E2E629200A009DF</string>
+				<string>17829A351E2EF56C001F12E7</string>
+				<string>177B341F1E2E629200A009DF</string>
+				<string>177B341A1E2E629200A009DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>177B34101E2E629100A009DF</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>177B34261E2E629200A009DF</string>
+			<key>buildPhases</key>
+			<array>
+				<string>966D6FE30909A6F0E7DBD09F</string>
+				<string>177B340D1E2E629100A009DF</string>
+				<string>177B340E1E2E629100A009DF</string>
+				<string>177B340F1E2E629100A009DF</string>
+				<string>7F8D453F8505E5DA6C275DBB</string>
+				<string>70A344B7276A1F132BDC4F33</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>ConnectmedicaChallenge</string>
+			<key>productName</key>
+			<string>ConnectmedicaChallenge</string>
+			<key>productReference</key>
+			<string>177B34111E2E629200A009DF</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>177B34111E2E629200A009DF</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>ConnectmedicaChallenge.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>177B34121E2E629200A009DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>177B34111E2E629200A009DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B34131E2E629200A009DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>177B34291E2E63BE00A009DF</string>
+				<string>177B342A1E2E63CB00A009DF</string>
+				<string>177B342C1E2E640A00A009DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ConnectmedicaChallenge</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B34141E2E629200A009DF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B34151E2E629200A009DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>177B34141E2E629200A009DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>177B34181E2E629200A009DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>177B34191E2E629200A009DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Form.storyboard</string>
+			<key>path</key>
+			<string>.</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B34191E2E629200A009DF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Form.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B341A1E2E629200A009DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>177B34181E2E629200A009DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>177B341B1E2E629200A009DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>177B341C1E2E629200A009DF</string>
+			</array>
+			<key>currentVersion</key>
+			<string>177B341C1E2E629200A009DF</string>
+			<key>isa</key>
+			<string>XCVersionGroup</string>
+			<key>path</key>
+			<string>ConnectmedicaChallenge.xcdatamodeld</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>versionGroupType</key>
+			<string>wrapper.xcdatamodel</string>
+		</dict>
+		<key>177B341C1E2E629200A009DF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>ConnectmedicaChallenge.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B341D1E2E629200A009DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>177B341B1E2E629200A009DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>177B341E1E2E629200A009DF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B341F1E2E629200A009DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>177B341E1E2E629200A009DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>177B34201E2E629200A009DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>177B34211E2E629200A009DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>path</key>
+			<string>.</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B34211E2E629200A009DF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B34221E2E629200A009DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>177B34201E2E629200A009DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>177B34231E2E629200A009DF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B34241E2E629200A009DF</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_ACTIVE_COMPILATION_CONDITIONS</key>
+				<string>DEBUG</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>177B34251E2E629200A009DF</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Owholemodule</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>177B34261E2E629200A009DF</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>177B34271E2E629200A009DF</string>
+				<string>177B34281E2E629200A009DF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>177B34271E2E629200A009DF</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>189475C1FA12CA5B4DEAF97D</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>WM5VQQ9GA7</string>
+				<key>INFOPLIST_FILE</key>
+				<string>ConnectmedicaChallenge/Resources/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>KZ.ConnectmedicaChallenge</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>177B34281E2E629200A009DF</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>75F1F9EECCA88B90CFEC0592</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>WM5VQQ9GA7</string>
+				<key>INFOPLIST_FILE</key>
+				<string>ConnectmedicaChallenge/Resources/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>KZ.ConnectmedicaChallenge</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>177B34291E2E63BE00A009DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>17829A3E1E2EFF2B001F12E7</string>
+				<string>177B342B1E2E63E700A009DF</string>
+				<string>17829A261E2E6899001F12E7</string>
+				<string>177B34141E2E629200A009DF</string>
+				<string>17EAEABD1E2FA58E0030EDC6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Application</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B342A1E2E63CB00A009DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>177B341B1E2E629200A009DF</string>
+				<string>17EAEAB91E2F94300030EDC6</string>
+				<string>17EAEABA1E2F94300030EDC6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B342B1E2E63E700A009DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>177B34181E2E629200A009DF</string>
+				<string>177B342D1E2E654400A009DF</string>
+				<string>177B342F1E2E662700A009DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Form</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B342C1E2E640A00A009DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>177B341E1E2E629200A009DF</string>
+				<string>177B34231E2E629200A009DF</string>
+				<string>177B34201E2E629200A009DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B342D1E2E654400A009DF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>FormViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B342E1E2E654400A009DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>177B342D1E2E654400A009DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>177B342F1E2E662700A009DF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>FormViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>177B34301E2E662700A009DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>177B342F1E2E662700A009DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A261E2E6899001F12E7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>17829A2B1E2E8FC9001F12E7</string>
+				<string>17829A291E2E70FF001F12E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>FormField</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A291E2E70FF001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>FormFieldViewModels.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A2A1E2E70FF001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A291E2E70FF001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A2B1E2E8FC9001F12E7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>17829A301E2E929F001F12E7</string>
+				<string>17829A311E2E929F001F12E7</string>
+				<string>17829A381E2EF673001F12E7</string>
+				<string>17829A2D1E2E8FF9001F12E7</string>
+				<string>17829A3C1E2EFACB001F12E7</string>
+				<string>17829A3A1E2EFA37001F12E7</string>
+				<string>17829A361E2EF5D2001F12E7</string>
+				<string>17829A341E2EF56C001F12E7</string>
+				<string>17829A2C1E2E8FF9001F12E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>View</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A2C1E2E8FF9001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ValueFormFieldCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A2D1E2E8FF9001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>DateFormFieldCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A2E1E2E8FF9001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A2C1E2E8FF9001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A2F1E2E8FF9001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A2D1E2E8FF9001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A301E2E929F001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CheckboxFormFieldCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A311E2E929F001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>CheckboxFormFieldCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A321E2E929F001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A301E2E929F001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A331E2E929F001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A311E2E929F001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A341E2EF56C001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>TextFormFieldCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A351E2EF56C001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A341E2EF56C001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A361E2EF5D2001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>TextFormFieldCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A371E2EF5D2001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A361E2EF5D2001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A381E2EF673001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DateFormFieldCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A391E2EF673001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A381E2EF673001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A3A1E2EFA37001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>DatePickerAccessoryView.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A3B1E2EFA37001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A3A1E2EFA37001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A3C1E2EFACB001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DatePickerAccessoryView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A3D1E2EFACB001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A3C1E2EFACB001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A3E1E2EFF2B001F12E7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>17829A3F1E2EFF3F001F12E7</string>
+				<string>17829A411E2F7CF1001F12E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Extensions</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A3F1E2EFF3F001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>BundleExtensions.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A401E2EFF3F001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A3F1E2EFF3F001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17829A411E2F7CF1001F12E7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RxVariableExtension.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17829A421E2F7CF1001F12E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17829A411E2F7CF1001F12E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17EAEAB91E2F94300030EDC6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PersonalInfoForm+CoreDataClass.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17EAEABA1E2F94300030EDC6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PersonalInfoForm+CoreDataProperties.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17EAEABB1E2F94300030EDC6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17EAEAB91E2F94300030EDC6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17EAEABC1E2F94300030EDC6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17EAEABA1E2F94300030EDC6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17EAEABD1E2FA58E0030EDC6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CoreDataHelper.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>17EAEABE1E2FA58E0030EDC6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>17EAEABD1E2FA58E0030EDC6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>189475C1FA12CA5B4DEAF97D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ConnectmedicaChallenge.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>62E9744B9DAF6A138A83EFB9</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_ConnectmedicaChallenge.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>70A344B7276A1F132BDC4F33</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>75F1F9EECCA88B90CFEC0592</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-ConnectmedicaChallenge.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7F8D453F8505E5DA6C275DBB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>966D6FE30909A6F0E7DBD09F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9BD521D7C6E8BD0245691CB8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>189475C1FA12CA5B4DEAF97D</string>
+				<string>75F1F9EECCA88B90CFEC0592</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7312D28699109FBD861414A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>62E9744B9DAF6A138A83EFB9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D58197EF4D13AD9DD9B9B548</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>62E9744B9DAF6A138A83EFB9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>177B34091E2E629100A009DF</string>
+</dict>
+</plist>
