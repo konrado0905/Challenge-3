@@ -26,6 +26,8 @@
 		17829A3D1E2EFACB001F12E7 /* DatePickerAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A3C1E2EFACB001F12E7 /* DatePickerAccessoryView.swift */; };
 		17829A401E2EFF3F001F12E7 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A3F1E2EFF3F001F12E7 /* BundleExtensions.swift */; };
 		17829A421E2F7CF1001F12E7 /* RxVariableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A411E2F7CF1001F12E7 /* RxVariableExtension.swift */; };
+		17EAEABB1E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EAEAB91E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift */; };
+		17EAEABC1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EAEABA1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift */; };
 		C7312D28699109FBD861414A /* Pods_ConnectmedicaChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E9744B9DAF6A138A83EFB9 /* Pods_ConnectmedicaChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		17829A3C1E2EFACB001F12E7 /* DatePickerAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerAccessoryView.swift; sourceTree = "<group>"; };
 		17829A3F1E2EFF3F001F12E7 /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		17829A411E2F7CF1001F12E7 /* RxVariableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxVariableExtension.swift; sourceTree = "<group>"; };
+		17EAEAB91E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PersonalInfoForm+CoreDataClass.swift"; sourceTree = "<group>"; };
+		17EAEABA1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PersonalInfoForm+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		189475C1FA12CA5B4DEAF97D /* Pods-ConnectmedicaChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectmedicaChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		62E9744B9DAF6A138A83EFB9 /* Pods_ConnectmedicaChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectmedicaChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F1F9EECCA88B90CFEC0592 /* Pods-ConnectmedicaChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectmedicaChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 		177B342A1E2E63CB00A009DF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				17EAEAB91E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift */,
+				17EAEABA1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift */,
 				177B341B1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld */,
 			);
 			path = Models;
@@ -318,6 +324,8 @@
 				17829A421E2F7CF1001F12E7 /* RxVariableExtension.swift in Sources */,
 				17829A321E2E929F001F12E7 /* CheckboxFormFieldCell.swift in Sources */,
 				177B341D1E2E629200A009DF /* ConnectmedicaChallenge.xcdatamodeld in Sources */,
+				17EAEABB1E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift in Sources */,
+				17EAEABC1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift in Sources */,
 				17829A401E2EFF3F001F12E7 /* BundleExtensions.swift in Sources */,
 				17829A2E1E2E8FF9001F12E7 /* ValueFormFieldCell.swift in Sources */,
 				177B34301E2E662700A009DF /* FormViewModel.swift in Sources */,
@@ -393,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -437,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
