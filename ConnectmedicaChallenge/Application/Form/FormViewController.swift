@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import CoreData
 
 let textFormCellReuseIdentifier = "textFormCell"
 let dateFormCellReuseIdentifier = "dateFormCell"
@@ -33,15 +34,15 @@ class FormViewController: UIViewController {
     lazy var formViewModel: FormViewModel = {
         var fields: [FormField] = []
 
-        fields.append(FormFieldViewModelFactory.textFormField(withName: "Imię", fullWidthField: false, placeholder: "Uzupełnij pole"))
-        fields.append(FormFieldViewModelFactory.textFormField(withName: "Nazwisko", fullWidthField: false, placeholder: "Uzupełnij pole"))
-        fields.append(FormFieldViewModelFactory.textFormField(withName: "Stanowisko", fullWidthField: false, placeholder: "Uzupełnij pole"))
-        fields.append(FormFieldViewModelFactory.textFormField(withName: "Firma", fullWidthField: false, placeholder: "Uzupełnij pole"))
-        fields.append(FormFieldViewModelFactory.textFormField(withName: "Adres e-mail", fullWidthField: true, placeholder: "Uzupełnij pole"))
-        fields.append(FormFieldViewModelFactory.textFormField(withName: "Telefon", fullWidthField: false, placeholder: "Uzupełnij pole"))
-        fields.append(FormFieldViewModelFactory.dateFormField(withName: "Data spotkania", fullWidthField: false, placeholder: "Wybierz datę"))
-        fields.append(FormFieldViewModelFactory.checkboxFormField(withText: "Wyrażam zgodę na otrzymywanie od firmy ABCDE Polska Sp. z o.o. ABCDE Polska Dystrybucja Sp. z o.o. oraz ABCDE PLC. informacji handlowych i naukowych drogą elektroniczną na wskazany powyżej adres email.", checked: false))
-        fields.append(FormFieldViewModelFactory.checkboxFormField(withText: "Wyrażam zgodę na przetwarzanie swoich danych osobowych, zgodnie z ustawą z dnia 29 sierpnia 1997r. o ochronie danych osobowych (tekst jednolity z dnia 17.06.2002r. Dz. U. Nr 101 poz. 926, z późna. zm.) w celach reklamowych i marketingowych przez firmę ABCDE Polska Sp. z o.o. oraz ABCDE Polska Dystrybucja Sp. z o.o.", checked: false))
+        fields.append(FormFieldViewModelFactory.textFormField(withName: "Imię", fullWidthField: false, placeholder: "Uzupełnij pole", modelKey: "name"))
+        fields.append(FormFieldViewModelFactory.textFormField(withName: "Nazwisko", fullWidthField: false, placeholder: "Uzupełnij pole", modelKey: "lastName"))
+        fields.append(FormFieldViewModelFactory.textFormField(withName: "Stanowisko", fullWidthField: false, placeholder: "Uzupełnij pole", modelKey: "position"))
+        fields.append(FormFieldViewModelFactory.textFormField(withName: "Firma", fullWidthField: false, placeholder: "Uzupełnij pole", modelKey: "company"))
+        fields.append(FormFieldViewModelFactory.textFormField(withName: "Adres e-mail", fullWidthField: true, placeholder: "Uzupełnij pole", modelKey: "email"))
+        fields.append(FormFieldViewModelFactory.textFormField(withName: "Telefon", fullWidthField: false, placeholder: "Uzupełnij pole", modelKey: "phoneNumber"))
+        fields.append(FormFieldViewModelFactory.dateFormField(withName: "Data spotkania", fullWidthField: false, placeholder: "Wybierz datę", modelKey: "meetingDate"))
+        fields.append(FormFieldViewModelFactory.checkboxFormField(withText: "Wyrażam zgodę na otrzymywanie od firmy ABCDE Polska Sp. z o.o. ABCDE Polska Dystrybucja Sp. z o.o. oraz ABCDE PLC. informacji handlowych i naukowych drogą elektroniczną na wskazany powyżej adres email.", checked: false, modelKey: "commercialInformationAgreement"))
+        fields.append(FormFieldViewModelFactory.checkboxFormField(withText: "Wyrażam zgodę na przetwarzanie swoich danych osobowych, zgodnie z ustawą z dnia 29 sierpnia 1997r. o ochronie danych osobowych (tekst jednolity z dnia 17.06.2002r. Dz. U. Nr 101 poz. 926, z późna. zm.) w celach reklamowych i marketingowych przez firmę ABCDE Polska Sp. z o.o. oraz ABCDE Polska Dystrybucja Sp. z o.o.", checked: false, modelKey: "marketingInformationAgreement"))
 
         return FormViewModel(formName: "Dane osobowe", formFields: fields)
     }()
@@ -54,6 +55,14 @@ class FormViewController: UIViewController {
 
     func bind() {
         self.title = formViewModel.formName
+    }
+
+    @IBAction func saveButtonDidTap(_ sender: UIBarButtonItem) {
+        formViewModel.saveForm()
+    }
+
+    @IBAction func loadLastRecordButtonDidTap(_ sender: UIBarButtonItem) {
+        formViewModel.loadLastRecord()
     }
 
     // MARK: Helpers

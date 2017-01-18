@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import CoreData
 
 class FormViewModel {
     let formName: String
     private var formFields: [FormField]
+    private var model: NSManagedObject?
 
     var fieldsCount: Int {
         return formFields.count
@@ -26,5 +28,49 @@ class FormViewModel {
         guard indexPath.row >= 0 && indexPath.row < fieldsCount else { return nil }
 
         return formFields[indexPath.row]
+    }
+
+    func loadFormFromModel(model: PersonalInfoForm) {
+        self.model = model
+
+        for case var field as ModelAttributeRepresentation in formFields {
+            if let value = model.value(forKey: field.modelKey) {
+                field.modelValue = value
+            }
+        }
+    }
+
+    func loadLastRecord() {
+        let fetchRequest = NSFetchRequest<PersonalInfoForm>(entityName: "PersonalInfoForm")
+
+        do {
+            let context = CoreDataHelper.context
+            let results = try context.fetch(fetchRequest)
+
+            if let lastRecord = results.last {
+                loadFormFromModel(model: lastRecord)
+            }
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+    }
+
+    func saveForm() {
+        let managedContext = CoreDataHelper.context
+
+        if model == nil {
+            let entity =  NSEntityDescription.entity(forEntityName: "PersonalInfoForm", in: managedContext)
+            model = NSManagedObject(entity: entity!, insertInto: managedContext)
+        }
+
+        for case let field as ModelAttributeRepresentation in formFields {
+            model?.setValue(field.modelValue, forKey: field.modelKey)
+        }
+
+        do {
+            try managedContext.save()
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
 }

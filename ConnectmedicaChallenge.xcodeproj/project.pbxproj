@@ -28,6 +28,7 @@
 		17829A421E2F7CF1001F12E7 /* RxVariableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17829A411E2F7CF1001F12E7 /* RxVariableExtension.swift */; };
 		17EAEABB1E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EAEAB91E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift */; };
 		17EAEABC1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EAEABA1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift */; };
+		17EAEABE1E2FA58E0030EDC6 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EAEABD1E2FA58E0030EDC6 /* CoreDataHelper.swift */; };
 		C7312D28699109FBD861414A /* Pods_ConnectmedicaChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E9744B9DAF6A138A83EFB9 /* Pods_ConnectmedicaChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		17829A411E2F7CF1001F12E7 /* RxVariableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxVariableExtension.swift; sourceTree = "<group>"; };
 		17EAEAB91E2F94300030EDC6 /* PersonalInfoForm+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PersonalInfoForm+CoreDataClass.swift"; sourceTree = "<group>"; };
 		17EAEABA1E2F94300030EDC6 /* PersonalInfoForm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PersonalInfoForm+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		17EAEABD1E2FA58E0030EDC6 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		189475C1FA12CA5B4DEAF97D /* Pods-ConnectmedicaChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectmedicaChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		62E9744B9DAF6A138A83EFB9 /* Pods_ConnectmedicaChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectmedicaChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F1F9EECCA88B90CFEC0592 /* Pods-ConnectmedicaChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectmedicaChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectmedicaChallenge/Pods-ConnectmedicaChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				177B342B1E2E63E700A009DF /* Form */,
 				17829A261E2E6899001F12E7 /* FormField */,
 				177B34141E2E629200A009DF /* AppDelegate.swift */,
+				17EAEABD1E2FA58E0030EDC6 /* CoreDataHelper.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17EAEABE1E2FA58E0030EDC6 /* CoreDataHelper.swift in Sources */,
 				177B342E1E2E654400A009DF /* FormViewController.swift in Sources */,
 				17829A421E2F7CF1001F12E7 /* RxVariableExtension.swift in Sources */,
 				17829A321E2E929F001F12E7 /* CheckboxFormFieldCell.swift in Sources */,

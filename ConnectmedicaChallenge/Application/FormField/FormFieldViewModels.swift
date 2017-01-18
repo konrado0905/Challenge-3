@@ -21,7 +21,12 @@ protocol FormField {
     var type: FormFieldType { get }
 }
 
-protocol ValueFormField: FormField {
+protocol ModelAttributeRepresentation {
+    var modelKey: String { get }
+    var modelValue: Any { get set }
+}
+
+protocol ValueFormField: FormField, ModelAttributeRepresentation {
     associatedtype ValueType
 
     var name: Variable<String> { get }
@@ -30,7 +35,7 @@ protocol ValueFormField: FormField {
     var focused: Variable<Bool> { get }
 }
 
-protocol CheckboxFormField: FormField {
+protocol CheckboxFormField: FormField, ModelAttributeRepresentation {
     var text: Variable<String> { get }
     var checked: Variable<Bool> { get }
 
@@ -55,9 +60,22 @@ class ValueFormFieldViewModel {
 
 class TextFormFieldViewModel: ValueFormFieldViewModel, ValueFormField {
     let value: Variable<String?>
+    let modelKey: String
+    var modelValue: Any {
+        get {
+            return value.value ?? ""
+        }
 
-    fileprivate init(name: String, fullWidthField: Bool, text: String?, placeholder: String, focused: Bool) {
+        set {
+            guard let newValue = newValue as? String else { return }
+
+            self.value.value = newValue
+        }
+    }
+
+    fileprivate init(name: String, fullWidthField: Bool, text: String?, placeholder: String, focused: Bool, modelKey: String) {
         self.value = Variable<String?>(text)
+        self.modelKey = modelKey
 
         super.init(name: name, fullWidthField: fullWidthField, placeholder: placeholder, type: .text, focused: focused)
     }
@@ -65,12 +83,26 @@ class TextFormFieldViewModel: ValueFormFieldViewModel, ValueFormField {
 
 class DateFormFieldViewModel: ValueFormFieldViewModel, ValueFormField {
     let value: Variable<Date?>
+    let modelKey: String
     private(set) var rx_formattedDate: Driver<String?>!
     private let dateFormatter: DateFormatter
 
-    fileprivate init(name: String, fullWidthField: Bool, date: Date?, placeholder: String, focused: Bool, dateFormatter: DateFormatter) {
+    var modelValue: Any {
+        get {
+            return value.value ?? Date(timeIntervalSince1970: 0)
+        }
+
+        set {
+            guard let newValue = newValue as? Date else { return }
+
+            self.value.value = newValue
+        }
+    }
+
+    fileprivate init(name: String, fullWidthField: Bool, date: Date?, placeholder: String, focused: Bool, dateFormatter: DateFormatter, modelKey: String) {
         self.value = Variable<Date?>(date)
         self.dateFormatter = dateFormatter
+        self.modelKey = modelKey
 
         super.init(name: name, fullWidthField: fullWidthField, placeholder: placeholder, type: .date, focused: focused)
 
@@ -90,10 +122,23 @@ class CheckboxFormFieldViewModel: CheckboxFormField {
     let fullWidthField = true
     let type: FormFieldType = .checkbox
     let checked: Variable<Bool>
+    let modelKey: String
+    var modelValue: Any {
+        get {
+            return checked.value
+        }
 
-    fileprivate init(text: String, checked: Bool) {
+        set {
+            guard let newValue = newValue as? Bool else { return }
+
+            self.checked.value = newValue
+        }
+    }
+
+    fileprivate init(text: String, checked: Bool, modelKey: String) {
         self.text = Variable<String>(text)
         self.checked = Variable<Bool>(checked)
+        self.modelKey = modelKey
     }
 
     func toggleCheck() {
@@ -102,18 +147,18 @@ class CheckboxFormFieldViewModel: CheckboxFormField {
 }
 
 class FormFieldViewModelFactory {
-    class func textFormField(withName name: String, fullWidthField: Bool, placeholder: String, text: String? = nil, focused: Bool = false) -> FormField {
-        return TextFormFieldViewModel(name: name, fullWidthField: fullWidthField, text: text, placeholder: placeholder, focused: focused)
+    class func textFormField(withName name: String, fullWidthField: Bool, placeholder: String, text: String? = nil, focused: Bool = false, modelKey: String) -> FormField {
+        return TextFormFieldViewModel(name: name, fullWidthField: fullWidthField, text: text, placeholder: placeholder, focused: focused, modelKey: modelKey)
     }
 
-    class func dateFormField(withName name: String, fullWidthField: Bool, placeholder: String, date: Date? = nil, focused: Bool = false) -> FormField {
+    class func dateFormField(withName name: String, fullWidthField: Bool, placeholder: String, date: Date? = nil, focused: Bool = false, modelKey: String) -> FormField {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
 
-        return DateFormFieldViewModel(name: name, fullWidthField: fullWidthField, date: date, placeholder: placeholder, focused: focused, dateFormatter: dateFormatter)
+        return DateFormFieldViewModel(name: name, fullWidthField: fullWidthField, date: date, placeholder: placeholder, focused: focused, dateFormatter: dateFormatter, modelKey: modelKey)
     }
 
-    class func checkboxFormField(withText text: String, checked: Bool = false) -> FormField {
-        return CheckboxFormFieldViewModel(text: text, checked: checked)
+    class func checkboxFormField(withText text: String, checked: Bool = false, modelKey: String) -> FormField {
+        return CheckboxFormFieldViewModel(text: text, checked: checked, modelKey: modelKey)
     }
 }
