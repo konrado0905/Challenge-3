@@ -123,9 +123,31 @@ class FormViewController: UIViewController {
         case .date:
             if let cell = cell as? DateFormFieldCell,
                 let model = model as? DateFormFieldViewModel {
+
+                func dateCompareBlock(dateOne: Date?, dateTwo: Date?) throws -> Bool {
+                    guard let dateOne = dateOne, let dateTwo = dateTwo else { return true }
+
+                    return dateOne.compare(dateTwo) == .orderedSame
+                }
+
+                model.value
+                    .asObservable()
+                    .distinctUntilChanged(dateCompareBlock)
+                    .bindTo(cell.date)
+                    .addDisposableTo(cell.disposeBag)
+
                 cell.date
                     .asObservable()
+                    .distinctUntilChanged(dateCompareBlock)
                     .bindTo(model.value)
+                    .addDisposableTo(cell.disposeBag)
+
+                cell.date
+                    .asObservable()
+                    .filter { $0 != nil }
+                    .subscribe(onNext: { [unowned cell] (date) in
+                        cell.datePicker.date = date!
+                    })
                     .addDisposableTo(cell.disposeBag)
 
                 model.rx_formattedDate

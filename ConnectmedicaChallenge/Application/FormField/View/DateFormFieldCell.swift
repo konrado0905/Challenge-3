@@ -19,19 +19,20 @@ class DateFormFieldCell: ValueFormFieldCell {
         setupInputView()
     }
 
-    @objc private func datePickerValueChanged(datePicker: UIDatePicker) {
-        date.value = datePicker.date
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        date.value = nil
     }
 
     private func setupInputView() {
         datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
-        datePicker.addTarget(self, action: #selector(datePickerValueChanged(datePicker:)), for: UIControlEvents.valueChanged)
 
         let accessoryView = Bundle.loadView(fromNib: "DatePickerAccessoryView", withType: DatePickerAccessoryView.self)
         accessoryView.doneHandler = { [unowned self] in
             self.valueTextField.resignFirstResponder()
-            self.datePickerValueChanged(datePicker: self.datePicker)
+            self.date.value = self.datePicker.date
         }
 
         valueTextField.inputView = datePicker
