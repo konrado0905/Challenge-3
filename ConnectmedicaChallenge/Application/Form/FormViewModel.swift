@@ -63,14 +63,18 @@ class FormViewModel {
             model = NSManagedObject(entity: entity!, insertInto: managedContext)
         }
 
-        for case let field as ModelAttributeRepresentation in formFields {
-            model?.setValue(field.modelValue, forKey: field.modelKey)
-        }
+        if let model = model {
+            for case let field as ModelAttributeRepresentation in formFields {
+                if model.responds(to: Selector(field.modelKey)) {
+                    model.setValue(field.modelValue, forKey: field.modelKey)
+                }
+            }
 
-        do {
-            try managedContext.save()
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
+            do {
+                try managedContext.save()
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            }
         }
     }
 }
