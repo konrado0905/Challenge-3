@@ -76,7 +76,7 @@ class FormViewController: UIViewController {
     }
 
     // MARK: Helpers
-    func reuseIdentifier(forType type: FormFieldType) -> String {
+    fileprivate func reuseIdentifier(forType type: FormFieldType) -> String {
         switch type {
         case .text:
             return textFormCellReuseIdentifier
@@ -87,7 +87,29 @@ class FormViewController: UIViewController {
         }
     }
 
-    func setup(cell: UICollectionViewCell, withModel model: FormField) {
+    fileprivate func getCheckboxCellSize(forWidth width: CGFloat, andText text: String) -> CGSize {
+        struct Statics {
+            static var checkboxCell: CheckboxFormFieldCell?
+        }
+
+        if Statics.checkboxCell == nil {
+            Statics.checkboxCell = Bundle.main.loadNibNamed("CheckboxFormFieldCell", owner: self, options: nil)?[0] as? CheckboxFormFieldCell
+        }
+
+        guard let checkboxCell = Statics.checkboxCell else { return CGSize() }
+
+        checkboxCell.frame.size = CGSize(width: width, height: 0)
+        checkboxCell.textLabel.text = text
+        checkboxCell.textLabel.sizeToFit()
+        checkboxCell.setNeedsLayout()
+        checkboxCell.layoutIfNeeded()
+
+        let height = checkboxCell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+
+        return CGSize(width: width, height: height)
+    }
+
+    fileprivate func setup(cell: UICollectionViewCell, withModel model: FormField) {
         let type = model.type
 
         switch type {
@@ -104,7 +126,7 @@ class FormViewController: UIViewController {
         }
     }
 
-    func setupValueCell(cell: ValueFormFieldCell, withModel model: ValueFormFieldViewModel) {
+    fileprivate func setupValueCell(cell: ValueFormFieldCell, withModel model: ValueFormFieldViewModel) {
         model.name
             .asObservable()
             .bindTo(cell.fieldNameLabel.rx.text)
@@ -180,7 +202,7 @@ class FormViewController: UIViewController {
         }
     }
 
-    func setupCheckboxCell(cell: CheckboxFormFieldCell, withModel model: CheckboxFormFieldViewModel) {
+    fileprivate func setupCheckboxCell(cell: CheckboxFormFieldCell, withModel model: CheckboxFormFieldViewModel) {
         model.text
             .asObservable()
             .bindTo(cell.textLabel.rx.text)
@@ -230,8 +252,10 @@ extension FormViewController: UICollectionViewDelegate {
 
 extension FormViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let model = formViewModel.getFormField(forIndexPath: indexPath) else { return CGSize() }
+
         let collectionViewWidth = collectionView.bounds.size.width - collectionView.contentInset.left - collectionView.contentInset.right
-        let fullWidthCell = formViewModel.getFormField(forIndexPath: indexPath)?.fullWidthField ?? false
+        let fullWidthCell = model.fullWidthField
         let cellWidth: CGFloat
         if fullWidthCell || traitCollection.horizontalSizeClass != .regular {
             cellWidth = collectionViewWidth
@@ -239,7 +263,11 @@ extension FormViewController: UICollectionViewDelegateFlowLayout {
             cellWidth = collectionViewWidth / 2
         }
 
-        return CGSize(width: cellWidth, height: 82)
+        if let model = model as? CheckboxFormField, model.type == .checkbox {
+            return getCheckboxCellSize(forWidth: cellWidth, andText: model.text.value)
+        } else {
+            return CGSize(width: cellWidth, height: 82)
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

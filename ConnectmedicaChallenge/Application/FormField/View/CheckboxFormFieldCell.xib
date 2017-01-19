@@ -26,7 +26,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi2-Bb-cIt">
-                        <rect key="frame" x="70" y="101" width="232" height="21"/>
+                        <rect key="frame" x="70" y="8" width="232" height="207"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,12 +36,12 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Vi2-Bb-cIt" firstAttribute="leading" secondItem="erU-cD-zrr" secondAttribute="trailing" constant="12" id="CcV-mj-oNr"/>
-                <constraint firstItem="erU-cD-zrr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="MXJ-8e-SWN"/>
+                <constraint firstItem="erU-cD-zrr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="top" priority="999" constant="8" id="MXJ-8e-SWN"/>
                 <constraint firstItem="erU-cD-zrr" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="fUo-Ht-DV5"/>
                 <constraint firstItem="Vi2-Bb-cIt" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="hjI-Y1-MKw"/>
                 <constraint firstAttribute="trailing" secondItem="Vi2-Bb-cIt" secondAttribute="trailing" constant="16" id="mod-bL-i4R"/>
                 <constraint firstItem="erU-cD-zrr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="oHb-Bf-yaD"/>
-                <constraint firstItem="Vi2-Bb-cIt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="pdB-oi-IE3"/>
+                <constraint firstItem="Vi2-Bb-cIt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" priority="750" constant="8" id="pdB-oi-IE3"/>
             </constraints>
             <size key="customSize" width="318" height="223"/>
             <connections>
