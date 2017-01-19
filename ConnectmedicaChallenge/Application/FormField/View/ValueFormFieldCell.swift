@@ -50,10 +50,18 @@ class ValueFormFieldCell: UICollectionViewCell {
     }
 
     func setFocused(focused: Bool) {
+        let lineColor: UIColor
+        let textColor: UIColor
+
         if focused {
-            underlineView.backgroundColor = UIColor.green
+            lineColor = UIColor(red:0.07, green:0.88, blue:0.56, alpha:1.00)
+            textColor = UIColor(red:0.07, green:0.88, blue:0.56, alpha:1.00)
         } else {
-            underlineView.backgroundColor = UIColor.gray
+            lineColor = UIColor(red:0.85, green:0.85, blue:0.85, alpha:1.00)
+            textColor = UIColor.black
         }
+
+        underlineView.backgroundColor = lineColor
+        fieldNameLabel.textColor = textColor
     }
 }
