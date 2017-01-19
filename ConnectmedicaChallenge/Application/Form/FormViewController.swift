@@ -26,6 +26,8 @@ class FormViewController: UIViewController {
             formCollectionView?.register(dateFormCellNib, forCellWithReuseIdentifier: dateFormCellReuseIdentifier)
             formCollectionView?.register(checkboxFormCellNib, forCellWithReuseIdentifier: checkboxFormCellReuseIdentifier)
 
+            formCollectionView?.contentInset = UIEdgeInsets()
+
             formCollectionView?.dataSource = self
             formCollectionView?.delegate = self
         }
@@ -55,6 +57,14 @@ class FormViewController: UIViewController {
 
     func bind() {
         self.title = formViewModel.formName
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        coordinator.animateAlongsideTransition(in: self.view, animation: { [weak self] (context) in
+            self?.formCollectionView.collectionViewLayout.invalidateLayout()
+        })
     }
 
     @IBAction func saveButtonDidTap(_ sender: UIBarButtonItem) {
@@ -220,6 +230,23 @@ extension FormViewController: UICollectionViewDelegate {
 
 extension FormViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.size.width, height: 82)
+        let collectionViewWidth = collectionView.bounds.size.width - collectionView.contentInset.left - collectionView.contentInset.right
+        let fullWidthCell = formViewModel.getFormField(forIndexPath: indexPath)?.fullWidthField ?? false
+        let cellWidth: CGFloat
+        if fullWidthCell || traitCollection.horizontalSizeClass != .regular {
+            cellWidth = collectionViewWidth
+        } else {
+            cellWidth = collectionViewWidth / 2
+        }
+
+        return CGSize(width: cellWidth, height: 82)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
