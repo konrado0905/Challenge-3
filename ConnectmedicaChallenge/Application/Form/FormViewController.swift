@@ -31,6 +31,7 @@ class FormViewController: UIViewController {
         }
     }
 
+    // Fake DI
     lazy var formViewModel: FormViewModel = {
         var fields: [FormField] = []
 
@@ -47,12 +48,25 @@ class FormViewController: UIViewController {
         return FormViewModel(formName: "Dane osobowe", formFields: fields)
     }()
 
-    let collectionViewInsets = UIEdgeInsets(top: 40, left: 20, bottom: 0, right: 20)
+    fileprivate let collectionViewInsets = UIEdgeInsets(top: 40, left: 20, bottom: 0, right: 20)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         bind()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        NotificationCenter.default.removeObserver(self)
     }
 
     func bind() {
@@ -76,6 +90,19 @@ class FormViewController: UIViewController {
     }
 
     // MARK: Helpers
+    func keyboardWillShow(notification: NSNotification) {
+        let info = notification.userInfo
+        let keyboardSize = (info?[UIKeyboardFrameBeginUserInfoKey] as? CGRect)?.size ?? CGSize()
+
+        formCollectionView.contentInset.bottom = keyboardSize.height
+        formCollectionView.scrollIndicatorInsets.bottom = keyboardSize.height
+    }
+
+    func keyboardWillHide(notification: NSNotification) {
+        formCollectionView.contentInset.bottom = 0
+        formCollectionView.scrollIndicatorInsets.bottom = 0
+    }
+
     fileprivate func reuseIdentifier(forType type: FormFieldType) -> String {
         switch type {
         case .text:
