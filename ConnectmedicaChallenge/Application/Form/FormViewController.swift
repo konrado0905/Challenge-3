@@ -125,6 +125,10 @@ class FormViewController: UIViewController {
                 let model = model as? DateFormFieldViewModel {
 
                 func dateCompareBlock(dateOne: Date?, dateTwo: Date?) throws -> Bool {
+                    if (dateOne == nil && dateTwo != nil) || (dateOne != nil && dateTwo == nil) {
+                        return false
+                    }
+
                     guard let dateOne = dateOne, let dateTwo = dateTwo else { return true }
 
                     return dateOne.compare(dateTwo) == .orderedSame
