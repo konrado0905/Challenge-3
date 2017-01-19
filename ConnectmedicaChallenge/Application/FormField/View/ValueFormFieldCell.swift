@@ -13,6 +13,8 @@ class ValueFormFieldCell: UICollectionViewCell {
     @IBOutlet weak var fieldNameLabel: UILabel!
     @IBOutlet weak var valueTextField: UITextField! {
         didSet {
+            valueTextField?.backgroundColor = UIColor.white
+
             valueTextField.rx
                 .controlEvent(UIControlEvents.editingDidBegin)
                 .subscribe(onNext: { [unowned self] in

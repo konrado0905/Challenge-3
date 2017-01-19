@@ -24,19 +24,21 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="Load last record" id="uhQ-T8-LvI">
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <action selector="loadLastRecordButtonDidTap:" destination="BYZ-38-t0r" id="dKa-mi-P11"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zxU-Mm-UcI"/>
                                     <barButtonItem systemItem="save" id="cOB-5C-dy8">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="saveButtonDidTap:" destination="BYZ-38-t0r" id="7a5-7Y-XmK"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ad7-a9-adv">
+                            <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ad7-a9-adv">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NNT-Ml-beq">
@@ -59,6 +61,8 @@
                             <constraint firstAttribute="trailing" secondItem="ad7-a9-adv" secondAttribute="trailing" id="wOW-bd-kbn"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="q83-pc-6Ld"/>
                     <connections>
                         <outlet property="formCollectionView" destination="ad7-a9-adv" id="Z2A-T6-oW2"/>

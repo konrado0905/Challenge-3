@@ -26,8 +26,6 @@ class FormViewController: UIViewController {
             formCollectionView?.register(dateFormCellNib, forCellWithReuseIdentifier: dateFormCellReuseIdentifier)
             formCollectionView?.register(checkboxFormCellNib, forCellWithReuseIdentifier: checkboxFormCellReuseIdentifier)
 
-            formCollectionView?.contentInset = UIEdgeInsets()
-
             formCollectionView?.dataSource = self
             formCollectionView?.delegate = self
         }
@@ -49,6 +47,8 @@ class FormViewController: UIViewController {
         return FormViewModel(formName: "Dane osobowe", formFields: fields)
     }()
 
+    let collectionViewInsets = UIEdgeInsets(top: 40, left: 20, bottom: 0, right: 20)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,7 +62,7 @@ class FormViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
 
-        coordinator.animateAlongsideTransition(in: self.view, animation: { [weak self] (context) in
+        coordinator.animate(alongsideTransition: { [weak self] (context) in
             self?.formCollectionView.collectionViewLayout.invalidateLayout()
         })
     }
@@ -254,7 +254,7 @@ extension FormViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let model = formViewModel.getFormField(forIndexPath: indexPath) else { return CGSize() }
 
-        let collectionViewWidth = collectionView.bounds.size.width - collectionView.contentInset.left - collectionView.contentInset.right
+        let collectionViewWidth = collectionView.bounds.size.width - collectionViewInsets.left - collectionViewInsets.right
         let fullWidthCell = model.fullWidthField
         let cellWidth: CGFloat
         if fullWidthCell || traitCollection.horizontalSizeClass != .regular {
@@ -266,15 +266,19 @@ extension FormViewController: UICollectionViewDelegateFlowLayout {
         if let model = model as? CheckboxFormField, model.type == .checkbox {
             return getCheckboxCellSize(forWidth: cellWidth, andText: model.text.value)
         } else {
-            return CGSize(width: cellWidth, height: 82)
+            return CGSize(width: cellWidth, height: 88)
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 40
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return collectionViewInsets
     }
 }
